@@ -42,5 +42,8 @@ module.exports = function(app) {
     app.set('appPath', path.join(config.root, 'client'));
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
+
+    //william:
+    app.use('/data', express.static(config.root + '/client/app/data'));
   }
 };
