@@ -5,6 +5,9 @@ angular.module('yod3App.components')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    }, {
+      'title': 'Sankey',
+      'link': 'sankey'
     }];
 
     $scope.isCollapsed = true;

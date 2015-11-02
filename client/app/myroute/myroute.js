@@ -7,5 +7,10 @@ angular.module('yod3App')
         url: '/myroute',
         templateUrl: 'app/myroute/myroute.html',
         controller: 'MyrouteCtrl'
+      })
+      .state('sankey', {
+        url: '/sankey',
+        templateUrl: 'app/myroute/myroute.html',
+        controller: 'MyrouteCtrl'
       });
   });
