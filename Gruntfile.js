@@ -56,7 +56,6 @@ module.exports = function (grunt) {
     watch: {
       injectJS: {
         files: [
-          '!<%= yeoman.client %>/{app}/mylogin/**/*.js',
           '<%= yeoman.client %>/{app,components}/**/*.js',
           '!<%= yeoman.client %>/{app,components}/**/*.spec.js',
           '!<%= yeoman.client %>/{app,components}/**/*.mock.js',
@@ -543,7 +542,8 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.client %>/index.html': [
-            '<%= yeoman.client %>/{app,components}/**/*.css'
+            '<%= yeoman.client %>/{app,components}/**/*.css',
+            '!<%= yeoman.client %>/app/mylogin/**/*.css'
           ]
         }
       }

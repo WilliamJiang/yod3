@@ -1,3 +1,9 @@
+## Pre-preparion
+
+```bash
+$ npm install -g generator-angular-fullstack
+```
+
 ## Initialize:
 
 ```bash
@@ -46,9 +52,46 @@ $ bower install angular-formly angular-formly-templates-bootstrap bootstrap api-
 
 // add factory/service into mylogin/ folder
 $ yo angular-fullstack:factory mylogin
+```
+
+Update Gruntfile.js <code>injector:js</code> section to ignore /mylogin/**.js files out of client/index.html.
+
+## Mongod
+```bash
+$ nohup mongod &
+```
+
+Use <code>Robomongo</code> to monitor.
+
+
+## grunt
+
+```bash
+$ grunt serve
+$ grunt test
+$ grunt build
+$ grunt serve:debug
 
 ```
 
+#### Updating npm packages 
+
+Default npm packages on Angular Full-stack generator is a bit old, so let's update to the latest versions using npm-check-updates.
+```bash
+$ npm install -g npm-check-updates
+$ npm-check-updates -u
+$ npm install
+```
 
 #### remove from bower.json
-"angular-messages": "~1.4.7",
+"angular-messages": "~1.4.7"
+
+### Bugs & Fixs:
+
+
+1. index.html: (auto-injector)
+  package.json: grunt-injector
+  Gruntfile.js: <code>injector</code> section
+  
+1. auth token
+ngCookie: /api/users/me
