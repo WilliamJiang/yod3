@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yod3App')
+angular.module('yod3App.components')
   .factory('User', function ($resource) {
     return $resource('/api/users/:id/:controller', {
       id: '@_id'

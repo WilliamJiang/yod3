@@ -18,6 +18,10 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/admin/admin.socket').register(socket);
+  require('../api/d3/d3.socket').register(socket);
+  require('../api/iphone/iphone.socket').register(socket);
+  require('../api/message/message.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 

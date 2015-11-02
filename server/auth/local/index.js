@@ -14,6 +14,10 @@ router.post('/', function(req, res, next) {
 
     var token = auth.signToken(user._id, user.role);
     res.json({token: token});
+
+    // william
+    //var path = require('path');
+    //res.sendFile(path.resolve('client') + '/index.html');
   })(req, res, next)
 });
 

@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('yod3App')
+angular.module('yod3App.components')
   .directive('mongooseError', function () {
     return {
       restrict: 'A',

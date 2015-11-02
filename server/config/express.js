@@ -44,6 +44,8 @@ module.exports = function(app) {
     app.use(errorHandler()); // Error handler - has to be last
 
     //william:
-    app.use('/data', express.static(config.root + '/client/app/data'));
+    app.use('/data', express.static(config.root + '/data'));
+    app.use('/login', express.static(config.root + '/client/app/mylogin'));
+    app.use('/client', express.static(config.root + '/client'));
   }
 };

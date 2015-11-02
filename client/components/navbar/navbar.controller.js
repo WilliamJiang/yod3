@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yod3App')
+angular.module('yod3App.components')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',

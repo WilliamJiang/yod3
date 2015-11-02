@@ -1,0 +1,10 @@
+<uib-tabset>
+  <uib-tab heading="Carousel">
+
+    This is the first content part?
+  </uib-tab>
+  <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+    {{tab.content}}
+  </uib-tab>
+</uib-tabset>
+

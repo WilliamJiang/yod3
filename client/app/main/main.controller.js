@@ -29,6 +29,7 @@ angular.module('yod3App')
      * william from: http://bl.ocks.org/mbostock/4063269
      */
     $scope.createGraph = function() {
+      var d3 = d3 || window.d3;
       var diameter = 960,
         format = d3.format(",d"),
         color = d3.scale.category20c();
@@ -38,13 +39,18 @@ angular.module('yod3App')
         .size([diameter, diameter])
         .padding(1.5);
 
+      /**
+       * select('#chart') instead of 'body'.
+       */
       var svg = d3.select("body").append("svg")
         .attr("width", diameter)
         .attr("height", diameter)
         .attr("class", "bubble");
 
       d3.json("data/flare.json", function(error, root) {
-        if (error) throw error;
+        if (error) {
+          throw error;
+        }
 
         var node = svg.selectAll(".node")
           .data(bubble.nodes(classes(root))
@@ -80,7 +86,11 @@ angular.module('yod3App')
       }
 
       d3.select(self.frameElement).style("height", diameter + "px");
-    }.call(this);
+    };
+
+    if('#chart.length' && '#chart.text()'===0) {
+      $scope.createGraph();
+    }
 
     /**
      * potentially use localStorageService

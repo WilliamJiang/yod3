@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yod3App')
+angular.module('yod3App.components')
   .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
     var currentUser = {};
     if($cookieStore.get('token')) {

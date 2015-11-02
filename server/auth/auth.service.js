@@ -21,6 +21,11 @@ function isAuthenticated() {
       if(req.query && req.query.hasOwnProperty('access_token')) {
         req.headers.authorization = 'Bearer ' + req.query.access_token;
       }
+      //william added:
+      else if(req.headers.cookie) {
+        var token = req.headers.cookie.split('%22')[1];
+        req.headers.authorization = 'Bearer ' + token;
+      }
       validateJwt(req, res, next);
     })
     // Attach user to request

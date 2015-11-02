@@ -11,11 +11,14 @@ angular.module('yod3App', [
   'ngAnimate',
   'ngTouch',
   'legendDirectives', 'nvd3ChartDirectives',
-  'ngMessages',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ad3',
+  'yod3App.components'
 ])
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider',
     function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+
+
     $urlRouterProvider
       .otherwise('/');
 

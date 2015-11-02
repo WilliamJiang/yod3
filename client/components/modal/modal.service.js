@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yod3App')
+angular.module('yod3App.components')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal
