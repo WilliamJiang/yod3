@@ -37,6 +37,8 @@ $ yo angular-fullstack:endpoint message
 $ yo angular-fullstack:endpoint iphone
 $ yo angular-fullstack:endpoint d3
 $ yo angular-fullstack:endpoint admin 
+
+$ yo angular-fullstack:route d3
 ```
 
 ```bash

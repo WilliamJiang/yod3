@@ -6,8 +6,11 @@ angular.module('yod3App.components')
       'title': 'Home',
       'link': '/'
     }, {
-      'title': 'Sankey',
-      'link': 'sankey'
+      'title': 'Sankey Diagrams',
+      'link': 'sankeyDiagram'
+    }, {
+      'title': 'D3',
+      'link' : 'd3'
     }];
 
     $scope.isCollapsed = true;

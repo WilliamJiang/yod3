@@ -1,0 +1,16 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <ul class="nav navbar-nav">
+      <li ng-repeat="item in tabs" ng-class="{active: isActive(item.link)}">
+        <a ui-sref="{{item.link}}">{{item.title}}</a>
+      </li>
+    </ul>
+  </div>
+  <!--<a href="#" ui-sref="sankey">Rework Sankey</a>-->
+  <!--<a href="" ui-sref="pipeline_health">Pipeline health</a>-->
+  <!--<a href="" ui-sref="delinquent">Delinquent</a>-->
+  <!--<a href="" ui-sref="alert_panel">Alerts panel</a>-->
+  <div ui-view></div>
+</div>

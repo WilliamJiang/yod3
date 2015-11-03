@@ -8,8 +8,8 @@ angular.module('yod3App')
         templateUrl: 'app/myroute/myroute.html',
         controller: 'MyrouteCtrl'
       })
-      .state('sankey', {
-        url: '/sankey',
+      .state('Sankey Diagrams', {
+        url: '/sankeyDiagram',
         templateUrl: 'app/myroute/myroute.html',
         controller: 'MyrouteCtrl'
       });

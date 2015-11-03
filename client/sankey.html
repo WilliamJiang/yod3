@@ -29,9 +29,11 @@
 
 <p id="chart">
 
-  <script src="http://d3js.org/d3.v3.js"></script>
-  <script src="components/sankey.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/d3-plugins-sankey/sankey.js"></script>
   <script>
+
+  function load() {
 
     var units = "Widgets";
 
@@ -141,6 +143,9 @@
         link.attr("d", path);
       }
     });
+  }
+
+    window.onload = load;
 
   </script>
 
