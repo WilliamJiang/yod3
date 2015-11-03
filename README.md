@@ -42,6 +42,13 @@ $ yo angular-fullstack:route d3
 ```
 
 ```bash
+$ yo angular-fullstack:route iphone
+$ yo angular-fullstack:route vendor_manager
+$ yo angular-fullstack:route risk_officer
+```
+
+
+```bash
 $ yo angular-fullstack:route mylogin
 $ cd client/app/mylogin
 $ bower init

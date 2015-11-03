@@ -17,7 +17,7 @@ angular.module('yod3App.login')
         templateOptions: {
           type: 'email',
           label: 'Email address',
-          placeholder: 'Enter email'
+          placeholder: 'test@test.com'
         }
       },
       {
@@ -26,14 +26,36 @@ angular.module('yod3App.login')
         templateOptions: {
           type: 'password',
           label: 'Password',
-          placeholder: 'Password'
+          placeholder: 'test'
         }
+      },
+      {
+        key: "go to browers",
+        type: "radio",
+        "templateOptions": {
+          "label": "iPhone, Risk Officer, Vendor Manager",
+          "options": [
+            {
+              "name": "iPhone",
+              "value": "iPhone"
+            },
+            {
+              "name": "Risk Officer",
+              "value": "Risk Officer"
+            },
+            {
+              "name": "Vendor Manager",
+              "value": "Vendor Manager"
+            }
+          ]
+        }
+
       },
       {
         key: 'checked',
         type: 'checkbox',
         templateOptions: {
-          label: 'Check me out'
+          label: 'Remember Me!'
         }
       }
     ];
